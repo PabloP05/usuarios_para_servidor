@@ -1,10 +1,10 @@
 <?php
-    require 'config/configUserDB.php';
+    require 'config/consfigDB.php';
     class rellenarSelect {
         private $conexion;
         
         function __construct(){
-            $this->conexion = new mysqli(SERVIDROR, USUARIO, PASWORD, BBDD);;
+            $this->conexion = new mysqli(SERVIDROR, USUARIOWEB, PASWORDWEB, BBDD);
         }
 
         public function cargarDatosSelect() {

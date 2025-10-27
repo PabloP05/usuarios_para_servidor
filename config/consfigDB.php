@@ -4,5 +4,7 @@
     define('USUARIO','root');
     define('PASWORD','');
     define('BBDD','2daw');
+    define('USUARIOWEB','usuarioPruebas');
+    define('PASWORDWEB','1234');
 
 ?>

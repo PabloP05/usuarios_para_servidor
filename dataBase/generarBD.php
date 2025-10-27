@@ -1,9 +1,9 @@
 <?php
 
     require '../config/consfigDB.php';
-
-  $conexion = new mysqli(SERVIDROR,USUARIO,PASWORD); // no le paso la bd porque la voy a crear aqui 
-
+    require 'usuarios.php';
+    $conexion = new mysqli(SERVIDROR,USUARIO,PASWORD); // no le paso la bd porque la voy a crear aqui 
+    $usuario = new usuarioWeb();
 
     if ($conexion->connect_error) { // esto comprueba que si la base de datos no existe la cree despues 
 
@@ -58,7 +58,7 @@
 
         $conexion->query($sql);
 
-
+    $usuario->crearUsuario();
         
     //INSERCION MASIVA DE DATOS
     

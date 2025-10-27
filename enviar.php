@@ -1,11 +1,11 @@
 <?php
-    require 'config/configUserDB.php';
+    require 'config/consfig.php';
 
 
     /* print_r($_POST); */
 
 
-    $conexion = new mysqli(SERVIDROR,USUARIO,PASWORD,BBDD);
+    $conexion = new mysqli(SERVIDROR,USUARIOWEB,PASWORDWEB,BBDD);
 //para sacar el ultimo id de la bd se utiliza insert_id
 
         if(!empty($_POST['correo'])){ //valido que si el usuario no agrega un correo no se envie el valor vacio a la bd 
