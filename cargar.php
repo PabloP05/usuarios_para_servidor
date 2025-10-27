@@ -1,5 +1,5 @@
 <?php
-    require 'config/consfigDB.php';
+    require_once 'config/consfigDB.php';  //evito errores de llamadas duplicadas al archivo de configuracion del sistema de BD 
     class rellenarSelect {
         private $conexion;
         

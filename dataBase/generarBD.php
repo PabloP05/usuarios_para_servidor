@@ -1,7 +1,7 @@
 <?php
 
-    require 'config/consfigDB.php';
-    require 'usuarios.php';
+    require_once '../config/consfigDB.php';
+    require_once 'usuarios.php';
     $conexion = new mysqli(SERVIDROR,USUARIO,PASWORD); // no le paso la bd porque la voy a crear aqui 
     $usuario = new usuarioWeb();
 
@@ -98,6 +98,9 @@
 
     }
 
-   
+   try{
     $usuario->crearUsuario();
+   }catch(Exception $error){
+    
+   }
 ?>

@@ -1,5 +1,5 @@
 <?php
-    require 'config/consfigDB.php';
+    require_once 'config/consfigDB.php';
 
 
     /* print_r($_POST); */
@@ -29,7 +29,6 @@
                         
                     //mensaje de error oficial de mysqli : $conexion->error
                 }
-
             }
             if($conexion->affected_rows>0){
                 $id=$conexion->insert_id;
@@ -41,6 +40,5 @@
                 if($conexion->affected_rows>0){
                     echo 'filas agregadas con existo';
                 }
-
             }
 ?>
