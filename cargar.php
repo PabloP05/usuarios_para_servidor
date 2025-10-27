@@ -4,7 +4,7 @@
         private $conexion;
         
         function __construct(){
-            $this->conexion = new mysqli(SERVIDROR, USUARIOWEB, PASWORDWEB, BBDD);
+            $this->conexion = new mysqli(SERVIDROR, USUARIO, PASWORD, BBDD);
         }
 
         public function cargarDatosSelect() {

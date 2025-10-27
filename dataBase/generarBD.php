@@ -1,6 +1,6 @@
 <?php
 
-    require '../config/consfigDB.php';
+    require 'config/consfigDB.php';
     require 'usuarios.php';
     $conexion = new mysqli(SERVIDROR,USUARIO,PASWORD); // no le paso la bd porque la voy a crear aqui 
     $usuario = new usuarioWeb();
@@ -18,7 +18,7 @@
         /* echo $sql; */
 
         $conexion->query($sql);
-        $conexion->select_db('2daw'); 
+        $conexion->select_db('2daw');
     
 
         $sql='CREATE TABLE IF NOT EXISTS paises( 
@@ -35,12 +35,12 @@
             nombre varchar(50),
             clave varchar(50),
             pais varchar(50),
-            correo varchar(50)
+            correo varchar(50) unique
         );';
         $conexion->query($sql);  
     
         $sql = 'CREATE TABLE IF NOT EXISTS checkbox(
-            idCheckbox tinyint PRIMARY KEY AUTO_INCREMENT,
+            idCheckbox tinyint PRIMARY KEY AUTO_INCREMENT,  
             checkbox varchar(50)
         )';
         $conexion->query($sql);
@@ -54,11 +54,8 @@
         $conexion->query($sql); 
         $sql = 'ALTER TABLE usuarios 
                 MODIFY correo varchar(50) DEFAULT NULL';
-            
-
         $conexion->query($sql);
 
-    $usuario->crearUsuario();
         
     //INSERCION MASIVA DE DATOS
     
@@ -101,6 +98,6 @@
 
     }
 
-    $conexion->close();
-
+   
+    $usuario->crearUsuario();
 ?>

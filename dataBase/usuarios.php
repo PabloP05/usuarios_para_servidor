@@ -1,5 +1,5 @@
 <?php
-    require '../config/consfigDB.php';
+ require 'config/consfigDB.php';
 
     class usuarioWeb{
         public function crearUsuario(){
